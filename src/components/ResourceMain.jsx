@@ -1,8 +1,11 @@
 import React from "react";
+import Filters from "./Filters";
 
 const ResourceMain = () => {
   return (
-    <div className="m-8 h-screen bg-yellow-700">This is main content area</div>
+    <div className="m-8 h-screen bg-yellow-700">
+      <Filters />
+    </div>
   );
 };
 
