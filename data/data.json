@@ -1,0 +1,103 @@
+const dummyResources = [
+    {
+      id: 1,
+      title: "What is Photosynthesis?",
+      category: "Science",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/UPBMG5EYydo/hqdefault.jpg",
+      readTime: 4, // duration in minutes
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=UPBMG5EYydo"
+    },
+    {
+      id: 2,
+      title: "Basic Algebra Explained",
+      category: "Math",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/NybHckSEQBI/hqdefault.jpg",
+      readTime: 9,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=NybHckSEQBI"
+    },
+    {
+      id: 3,
+      title: "Grammar Guide: 12 Common Mistakes",
+      category: "Language",
+      type: "Article",
+      thumbnailUrl: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*VQ5yXzdiU-43TnMyV5FgRA.jpeg",
+      readTime: 6,
+      isLiked: false,
+      link: "https://medium.com/@englishlessons/12-common-grammar-mistakes-295cf501d1ca"
+    },
+    {
+      id: 4,
+      title: "The Solar System 101",
+      category: "Science",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/libKVRa01L8/hqdefault.jpg",
+      readTime: 7,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=libKVRa01L8"
+    },
+    {
+      id: 5,
+      title: "Understanding Fractions Easily",
+      category: "Math",
+      type: "Article",
+      thumbnailUrl: "https://cdn.kastatic.org/ka-perseus-images/fc1a687d01762b678d903e30bc11e7db9cb62612.png",
+      readTime: 5,
+      isLiked: false,
+      link: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic"
+    },
+    {
+      id: 6,
+      title: "Public Speaking Tips for Kids",
+      category: "Skills",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/fjPI9VfzAqU/hqdefault.jpg",
+      readTime: 8,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=fjPI9VfzAqU"
+    },
+    {
+      id: 7,
+      title: "The Water Cycle | National Geographic",
+      category: "Science",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/IO9tT186mZw/hqdefault.jpg",
+      readTime: 3,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=IO9tT186mZw"
+    },
+    {
+      id: 8,
+      title: "Geometry Basics: Shapes and Angles",
+      category: "Math",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/xCdxURXMdFY/hqdefault.jpg",
+      readTime: 10,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=xCdxURXMdFY"
+    },
+    {
+      id: 9,
+      title: "How to Improve Your Vocabulary",
+      category: "Language",
+      type: "Article",
+      thumbnailUrl: "https://www.oxfordlearning.com/wp-content/uploads/2017/10/vocabulary-words.jpg",
+      readTime: 4,
+      isLiked: false,
+      link: "https://www.oxfordlearning.com/5-simple-ways-improve-childs-vocabulary/"
+    },
+    {
+      id: 10,
+      title: "Mindfulness for Kids",
+      category: "Skills",
+      type: "Video",
+      thumbnailUrl: "https://img.youtube.com/vi/WPni755-Krg/hqdefault.jpg",
+      readTime: 6,
+      isLiked: false,
+      link: "https://www.youtube.com/watch?v=WPni755-Krg"
+    }
+  ];
+  
