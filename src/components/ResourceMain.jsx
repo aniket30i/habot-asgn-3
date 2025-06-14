@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Filters from "./Filters";
 import ResourceContext from "../context/context";
+import Card from "./Card";
 
 const ResourceMain = () => {
   const [resourceData, setResourceData] = useState([]);
@@ -37,22 +38,24 @@ const ResourceMain = () => {
   console.log(resourceData);
 
   return (
-    <div className="m-8 h-screen bg-yellow-700">
+    <div className="m-8">
       <Filters />
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <div>
+        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
           {resourceData.map((resource) => (
-            <div key={resource.id}>
-              <h2>{resource.title}</h2>
-              <p>{resource.category}</p>
-              <p>{resource.type}</p>
-              <p>{resource.readTime}</p>
-              <p>{resource.link}</p>
-            </div>
+            <Card
+              id={resource.id}
+              title={resource.title}
+              isLiked={resource.isLiked}
+              readTime={resource.readTime}
+              thumbnailUrl={resource.thumbnailUrl}
+              type={resource.type}
+              category={resource.category}
+            />
           ))}
         </div>
       )}

@@ -5,7 +5,7 @@ import ResourceMain from "../components/ResourceMain";
 
 const Resource = () => {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen">
       <TitleBar />
       <Hero />
       <ResourceMain />
