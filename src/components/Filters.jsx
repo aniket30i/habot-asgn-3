@@ -2,11 +2,19 @@ import React, { useContext } from "react";
 import ResourceContext from "../context/context";
 
 const categories = ["Science", "Math", "Language", "Skills"];
-
+const duration = ["Short", "Medium", "Long"];
 const types = ["Video", "Article"];
 const Filters = () => {
-  const { type, setType, category, setCategory, sortOrder, setSortOrder } =
-    useContext(ResourceContext);
+  const {
+    type,
+    setType,
+    category,
+    setCategory,
+    sortOrder,
+    setSortOrder,
+    readTime,
+    setReadTime,
+  } = useContext(ResourceContext);
   return (
     <div className="flex w-full py-5">
       <div className="flex-1 p-4">
@@ -38,6 +46,23 @@ const Filters = () => {
         >
           <option value="">All</option>
           {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="flex-1 p-4">
+        <label>Read Time</label>
+        <select
+          name="category"
+          id="category"
+          value={readTime}
+          onChange={(e) => setReadTime(e.target.value)}
+          className="filter-selection"
+        >
+          <option value="">All</option>
+          {duration.map((category) => (
             <option key={category} value={category}>
               {category}
             </option>

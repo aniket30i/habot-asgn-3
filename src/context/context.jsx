@@ -8,10 +8,20 @@ export const ResourceProvider = ({ children }) => {
   const [type, setType] = useState("");
   const [category, setCategory] = useState("");
   const [sortOrder, setSortOrder] = useState("");
+  const [readTime, setReadTime] = useState("");
 
   return (
     <ResourceContext.Provider
-      value={{ type, setType, category, setCategory, sortOrder, setSortOrder }}
+      value={{
+        type,
+        setType,
+        category,
+        setCategory,
+        sortOrder,
+        setSortOrder,
+        readTime,
+        setReadTime,
+      }}
     >
       {children}
     </ResourceContext.Provider>
