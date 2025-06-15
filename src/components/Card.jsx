@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import liked from "../assets/icons/liked.png";
 import unliked from "../assets/icons/unliked.png";
+import forward from "../assets/icons/go.png";
 
 const Card = ({
   id,
@@ -26,12 +27,22 @@ const Card = ({
     <div key={id}>
       <div className=" bg-slate-100 rounded-xl">
         <div>
-          <img src={thumbnailUrl} className="h-84 rounded-t-2xl" />
+          <img src={thumbnailUrl} className="h-[350px] rounded-t-2xl" />
         </div>
         <div className="p-5">
           <label>{category}</label>
-          <p className="font-semibold text-xl my-2">{title}</p>
-          <div className="mt-10 flex justify-between items-center">
+          <p className="font-semibold text-xl my-2">
+            {title}
+            <span className="">
+              <img
+                src={forward}
+                alt=""
+                className="h-5 hover:bg-amber-300 cursor-pointer rounded-lg"
+                onClick={() => window.open(goLink, "_blank")}
+              />
+            </span>
+          </p>
+          <div className="mt-16 flex justify-between items-center">
             <label>{type}</label>
             <p>time : {readTime} mins</p>
             <span onClick={() => handleLike(id)}>
