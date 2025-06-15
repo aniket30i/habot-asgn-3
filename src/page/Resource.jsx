@@ -2,6 +2,7 @@ import React from "react";
 import TitleBar from "../components/TitleBar";
 import Hero from "../components/Hero";
 import ResourceMain from "../components/ResourceMain";
+import Footer from "../components/Footer";
 
 const Resource = () => {
   return (
@@ -9,6 +10,7 @@ const Resource = () => {
       <TitleBar />
       <Hero />
       <ResourceMain />
+      <Footer />
     </div>
   );
 };

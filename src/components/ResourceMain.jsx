@@ -5,7 +5,6 @@ import Card from "./Card";
 
 const ResourceMain = () => {
   const [resourceData, setResourceData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
   const { type, category, readTime, sortOrder } = useContext(ResourceContext);
 
   const [loading, setLoading] = useState(true);
@@ -62,7 +61,9 @@ const ResourceMain = () => {
     <div className="m-8">
       <Filters />
       {loading ? (
-        <p>Loading...</p>
+        <div className="flex justify-center h-96 w-full items-center">
+          <p>Fetching Resources...</p>
+        </div>
       ) : error ? (
         <p>{error}</p>
       ) : (
