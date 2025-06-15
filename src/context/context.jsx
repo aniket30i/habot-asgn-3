@@ -7,7 +7,7 @@ export default ResourceContext;
 export const ResourceProvider = ({ children }) => {
   const [type, setType] = useState("");
   const [category, setCategory] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("");
   const [readTime, setReadTime] = useState("");
 
   return (

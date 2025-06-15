@@ -28,7 +28,7 @@ const ResourceMain = () => {
         setError(err.message);
         console.error(err.message);
       } finally {
-        setTimeout(() => setLoading(false), 3000); // Simulated delay
+        setTimeout(() => setLoading(false), 3000);
       }
     };
 
@@ -48,15 +48,15 @@ const ResourceMain = () => {
     return typeMatch && categoryMatch && readingTimeMatch;
   });
 
-  const sortedArr = filtered.sort((a, b) => {
+  const sortedArr = [...filtered].sort((a, b) => {
     if (sortOrder === "asc") {
-      return a.title - b.title;
-    } else {
-      return b.title - a.title;
+      return a.title.localeCompare(b.title);
+    } else if (sortOrder === "desc") {
+      return b.title.localeCompare(a.title);
     }
   });
 
-  console.log(resourceData);
+  console.log(sortOrder, sortedArr);
 
   return (
     <div className="m-8">
