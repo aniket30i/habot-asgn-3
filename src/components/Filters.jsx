@@ -16,9 +16,9 @@ const Filters = () => {
     setReadTime,
   } = useContext(ResourceContext);
   return (
-    <div className="flex w-full py-5">
+    <div className="md:flex w-full py-5 xxs:grid xxs:grid-cols-2">
       <div className="flex-1 p-4">
-        <label>Type of Resource</label>
+        <label className="filter-labels">Type</label>
         <select
           name="type"
           id="type"
@@ -36,7 +36,7 @@ const Filters = () => {
       </div>
 
       <div className="flex-1 p-4">
-        <label>Category of Resources</label>
+        <label className="filter-labels">Category</label>
         <select
           name="category"
           id="category"
@@ -53,7 +53,7 @@ const Filters = () => {
         </select>
       </div>
       <div className="flex-1 p-4">
-        <label>Read Time</label>
+        <label className="filter-labels">Read Time</label>
         <select
           name="category"
           id="category"
@@ -70,7 +70,7 @@ const Filters = () => {
         </select>
       </div>
       <div className="flex-1 p-4">
-        <label>Sort by</label>
+        <label className="filter-labels">Sort by</label>
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}

@@ -66,7 +66,7 @@ const ResourceMain = () => {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
+        <div className="grid grid-cols-3 xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
           {sortedArr.map((resource) => (
             <Card
               id={resource.id}

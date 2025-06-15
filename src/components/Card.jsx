@@ -24,14 +24,14 @@ const Card = ({
   };
 
   return (
-    <div key={id}>
-      <div className=" bg-slate-100 rounded-xl">
-        <div>
-          <img src={thumbnailUrl} className="h-[350px] rounded-t-2xl" />
+    <div key={id} className="sm:h-[600px] bg-slate-100 rounded-xl">
+      <div className=" ">
+        <div className="w-full h-[350px] overflow-hidden rounded-t-2xl">
+          <img src={thumbnailUrl} className="h-full w-full object-cover" />
         </div>
-        <div className="p-5">
+        <div className="p-5 h-full flex flex-col justify-between">
           <label>{category}</label>
-          <p className="font-semibold text-xl my-2">
+          <p className="font-semibold text-xl my-2 h-36">
             {title}
             <span className="">
               <img
@@ -42,7 +42,7 @@ const Card = ({
               />
             </span>
           </p>
-          <div className="mt-16 flex justify-between items-center">
+          <div className="flex justify-between items-center">
             <label>{type}</label>
             <p>time : {readTime} mins</p>
             <span onClick={() => handleLike(id)}>

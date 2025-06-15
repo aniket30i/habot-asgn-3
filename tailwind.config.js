@@ -9,6 +9,11 @@ export default {
       colors: {
         "bg-theme": "#EDE6DC",
       },
+      screens: {
+        xxs: "300px",
+        xs: "375px",
+        "2xl": "1536px",
+      },
     },
   },
   plugins: [],
