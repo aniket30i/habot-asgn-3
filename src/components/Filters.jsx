@@ -76,8 +76,8 @@ const Filters = () => {
           onChange={(e) => setSortOrder(e.target.value)}
           className="filter-selection"
         >
-          <option value={sortOrder}>alphabetical A-Z </option>
-          <option value={sortOrder}>alphabetical Z-A </option>
+          <option value="asc">alphabetical A-Z </option>
+          <option value="desc">alphabetical Z-A </option>
         </select>
       </div>
     </div>

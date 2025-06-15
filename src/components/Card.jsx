@@ -10,6 +10,7 @@ const Card = ({
   thumbnailUrl,
   type,
   category,
+  goLink,
 }) => {
   const [likes, setLikes] = useState([]);
 

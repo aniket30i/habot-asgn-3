@@ -6,7 +6,7 @@ import Card from "./Card";
 const ResourceMain = () => {
   const [resourceData, setResourceData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const { type, category, sortOrder } = useContext(ResourceContext);
+  const { type, category, readTime, sortOrder } = useContext(ResourceContext);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -35,6 +35,27 @@ const ResourceMain = () => {
     fetchData();
   }, []);
 
+  const filtered = resourceData.filter((resource) => {
+    const typeMatch = type === "" || resource.type === type;
+    const categoryMatch = category === "" || resource.category === category;
+    const readingTimeMatch =
+      readTime === "" ||
+      (resource.readTime <= 5 && readTime === "Short") ||
+      (resource.readTime >= 10 && readTime === "Long") ||
+      (resource.readTime >= 5 &&
+        resource.readTime <= 10 &&
+        readTime === "Medium");
+    return typeMatch && categoryMatch && readingTimeMatch;
+  });
+
+  const sortedArr = filtered.sort((a, b) => {
+    if (sortOrder === "asc") {
+      return a.title - b.title;
+    } else {
+      return b.title - a.title;
+    }
+  });
+
   console.log(resourceData);
 
   return (
@@ -46,7 +67,7 @@ const ResourceMain = () => {
         <p>{error}</p>
       ) : (
         <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
-          {resourceData.map((resource) => (
+          {sortedArr.map((resource) => (
             <Card
               id={resource.id}
               title={resource.title}
@@ -55,6 +76,7 @@ const ResourceMain = () => {
               thumbnailUrl={resource.thumbnailUrl}
               type={resource.type}
               category={resource.category}
+              goLink={resource.link}
             />
           ))}
         </div>
