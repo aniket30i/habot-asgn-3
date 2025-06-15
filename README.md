@@ -13,7 +13,11 @@
 
 ### Usage
 
-Run the JSON Server - binded to port 3006
+Run the JSON Server - binded to port 3006 in a second terminal
 
 `npm run start:server`
+
+Run the vite live preview server
+
+`npm run dev`
 
