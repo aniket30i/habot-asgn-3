@@ -17,7 +17,7 @@ Run the JSON Server - binded to port 3006 in a second terminal
 
 `npm run start:server`
 
-Run the vite live preview server
+Run the vite live preview server in the primary terminal
 
 `npm run dev`
 
